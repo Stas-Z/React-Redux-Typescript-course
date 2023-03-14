@@ -1,10 +1,15 @@
+import TodoList from './components/TodoList';
 import UserList from './components/UserList'
 import "./style.css";
 
 
 const App = () => {
   return (
-    <div><UserList/></div>
+    <div>
+      <UserList/>
+      <hr/>
+      <TodoList/>
+    </div>
   )
 }
 

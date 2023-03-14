@@ -11,7 +11,7 @@ interface FetchUsersSuccesAction {
   type: UserActionTypes.FETCH_USERS_SUCCES;
   payload: any;
 }
-interface FetchUsersEroorAction {
+interface FetchUsersErrorAction {
   type: UserActionTypes.FETCH_USERS_ERROR;
   payload: string;
 }
@@ -19,7 +19,7 @@ interface FetchUsersEroorAction {
 export type UserAction =
   | FetchUsersAction
   | FetchUsersSuccesAction
-  | FetchUsersEroorAction;
+  | FetchUsersErrorAction;
 
 export interface UserState {
   users: any[];

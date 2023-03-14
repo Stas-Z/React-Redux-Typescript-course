@@ -1,6 +1,7 @@
 import {  useEffect } from "react";
 import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypedSelector";
+import { Loader } from "./Loader";
 
 const UserList:React.FC = () => {
     const { error, loading, users } = useTypedSelector(state => state.user)
@@ -11,20 +12,7 @@ const UserList:React.FC = () => {
     }, [])
    
     if (loading){
-        return (<div className="lds-default">
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-            <div/>
-        </div>)
+        return <Loader />
     }
     if (error){
         return <h1>{error}</h1>
